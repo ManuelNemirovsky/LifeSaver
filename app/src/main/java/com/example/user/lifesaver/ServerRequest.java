@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 
+import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -26,8 +27,19 @@ public class ServerRequest {
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
 
-    public String user_sign_up(String url, String json) throws IOException {
-        RequestBody body = RequestBody.create(JSON, json);
+  //  public String user_sign_up(String username , String password) throws IOException {
+   //     RequestBody body =  new FormBody.builder().
+    //    Request request = new Request.Builder()
+      //          .url(SERVER)
+     //           .post(body)
+     //           .build();
+     //   Response response = client.newCall(request).execute();
+    //    return response.body().string();
+   // }
+
+
+  /*  public String send_data(String username, String password, String category, String diagnosis, String age, String gender) throws IOException {
+        RequestBody body = new FormBody.builder().add('u')
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
@@ -35,7 +47,7 @@ public class ServerRequest {
         Response response = client.newCall(request).execute();
         return response.body().string();
     }
-
+*/
 
     OkHttpClient client = new OkHttpClient();
 

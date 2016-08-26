@@ -1,7 +1,7 @@
 package com.example.user.lifesaver;
 
 /**
- * Created by User on 8/19/2016.
+ * Created by User on 8/22/2016.
  */
 public class Patient {
     private String age;
